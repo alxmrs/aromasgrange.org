@@ -14,7 +14,7 @@ description-meta: "Aromas Grange Community Projects"
 Ninety-three years ago the Aromas Grange, which was established in 1913, consolidated three lots at the corner of Rose
 and Bardue Street and built its 5,000 square foot facility to serve the community of Aromas. The Hall was built with
 old-growth redwood and fir, and is still as straight and sound as it was then. However, a later expansion of the kitchen
-was not built up to the original high standards and has suffered over time. Local_EWH-2900-0
+was not built up to the original high standards and has suffered over time.
 
 In 2008 the roof on the Hall was redone, with the exception of the section over the kitchen. The sagging beams under
 that section of roof needed to be replaced before any other work could be done and the entire kitchen was overdue for an
