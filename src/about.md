@@ -18,7 +18,7 @@ Click here to see the website of the newly reorganized [California State Grange]
 
 In Aromas the Grange is the heart of our active, thriving community. If you want to know what’s going on in town, come
 join us and find out! We meet on the second Friday of every month, with a fabulous potluck dinner starting at 6:30; the
-business meeting starts at 7:15.
+business meeting starts at 7:15. Please check the [calendar](/events/) to see when the next meeting is!
 
 At the Aromas Community Grange we:
 
@@ -36,7 +36,7 @@ At the Aromas Community Grange we:
 ## A Brief History
 
 Aromas Grange #361 was organized on January 13, 1913 with 27 charter members. Meetings in the first few years were held
-in members’ homes and other places around the town of Aromas, but this eventually became inadequate. On August 20,1921,
+in members’ homes and other places around the town of Aromas, but this eventually became inadequate. On August 20, 1921,
 Grange members voted to build a new meeting hall. Brother H.F. Blohm quickly secured an option to buy a lot, 150X150
 feet, near the center of Aromas for $800 from Frank Leigh. Soon thereafter, teams using Fresno scrapers went to work
 leveling ground and hauling gravel. All of this work was donated.
@@ -73,8 +73,8 @@ ultimately revitalize the Grange movement.
 
 We took them at their word.
 
-In addition to the Scouts and 4H meetings, the Aromas Community Grange now hosts weekly Yoga and Tai Chi classes, a
-Knitting/Spinning group, and a concert series. We formed two separate non-profit organizations, the Teressie White
+In addition to the Scouts and 4H meetings, the Aromas Community Grange now hosts weekly Yoga and Pilates classes, a
+knitting/spinning groups, and a concert series. We formed two separate non-profit organizations, the Teressie White
 Memorial Scholarship Foundation and Neighbors Helping Neighbors, so that our charitable activities could benefit from
 the 501(c)3 status.
 

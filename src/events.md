@@ -15,9 +15,9 @@ description-meta: "The Aromas Grange Community Events Calendar"
 
 Anna brings an enthusiastic, motivating and uplifting spirit to all her classes. She is highly knowledgeable in the
 field of movement having come from a background of active life and sports-competition, ‘Handball’. She now uses these
-skills learnt over the last 25 yrs to inform her passion of Pilates. She is committed to clients reaching their personal
-goals. Anna has strong interest in field of fitness and overall well-being. She has been practicing daily Pilates, Yoga,
-cycling and mediation for over seventeen years in London where she worked in the most prestigious clubs in the City. She
+skills learnt over the last 25 years to inform her passion of Pilates. She is committed to clients reaching their personal
+goals. Anna has strong interest in field of fitness and overall well-being. She has been practicing daily Pilates, yoga,
+cycling and mediation for over seventeen years in London where she worked in the most prestigious clubs in the city. She
 relocated to California where she is teaching classical, contemporary, and uniquely modified Pilates. Anna is
 incorporating breathing and centering techniques into instruction for optimal health. Providing various modifications
 and progressions to provide sufficient work for all levels. The second aspect of her teaching revolves around her
@@ -40,7 +40,7 @@ and other various ailments.
 
 #### Dynamic Pilates
 
-_Monday’s & Wednesday’s at 6:30-7:15pm (except second Monday’s of the month)_
+_Monday’s & Wednesday’s at 5:45-5:60pm (except second Monday’s of the month)_
 
 During this class you will work through all planes of movement to condition every muscle of your body with this
 challenging, fast-paced but control series of exercises. Build strength, stability and mobility from head to toe with

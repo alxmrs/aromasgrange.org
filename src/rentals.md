@@ -11,7 +11,7 @@ Looking for a place to host your next event? The Aromas Grange is the perfect ha
 
 - Wedding Receptions
 - Birthday Parties for all ages
-- Quinceanera / Quinceañero
+- Quinceañera / Quinceañero
 - Family Gatherings
 - Business meetings
 - Community Events
@@ -20,7 +20,7 @@ Looking for a place to host your next event? The Aromas Grange is the perfect ha
 
 ![](/assets/event-at-the-grange.jpg "We can host all sorts of events!")
 
-Built at the dawn of the Roaring 20’s the original 1922 building carries a century of rustic history and charm.
+Built at the dawn of the roaring 20’s the original 1922 building carries a century of rustic history and charm.
 
 Our hall features solid hardwood floors, soaring open beam ceilings, a full commercial kitchen, and an elegant
 riverstone fireplace.
@@ -30,7 +30,7 @@ and rustic walls are perfect canvases for decorating while the polished hardwood
 twirl the night away dancing. The adjoining fireside room is perfect for those small group meetings or as a serving area
 from the attached full commercial kitchen.
 
-Contact our events Coordinator to find out more about hosting your event at the Aromas Grange and to schedule a tour!
+Contact our events coordinator to find out more about hosting your event at the Aromas Grange and to schedule a tour!
 
 ## Ready for More Information?  Contact our Events Coordinator for:
 
