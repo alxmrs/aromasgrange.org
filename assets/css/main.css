@@ -1,48 +1,303 @@
-/* thanks https://bettermotherfuckingwebsite.com */
-body {
-    margin: 40px auto;
-    max-width: 650px;
-    line-height: 1.6;
-    font-size: 18px;
-    color: #444;
-    padding: 0 10px
+/* ============================================================
+   Aromas Community Grange — Woodcut-Inspired Stylesheet
+   Palette drawn from Grange-Woodcut.jpg: ink on aged parchment
+   High-contrast, warm, handcrafted letterpress aesthetic
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Lora:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+
+/* --- Color Tokens --- */
+:root {
+    --parchment: #f3ede0;   /* aged paper background */
+    --ink:       #1c1208;   /* deep woodcut ink, near-black warm */
+    --ink-mid:   #3d2b14;   /* slightly lifted ink, dark walnut */
+    --wood:      #5a3a1a;   /* warm dark brown, like the hall's siding */
+    --grain:     #7a5228;   /* medium grain, lighter wood tone */
+    --muted:     #9a8a6a;   /* faded ink, aged paper edge */
 }
 
-h1, h2, h3 {
-    line-height: 1.2
+/* --- Reset & Base --- */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 2.5rem auto;
+    max-width: 720px;
+    padding: 0 1.5rem 4rem;
+    background-color: var(--parchment);
+    color: var(--ink);
+    font-family: 'Lora', Georgia, 'Times New Roman', serif;
+    font-size: 18px;
+    line-height: 1.75;
+}
+
+/* --- Navigation / Masthead --- */
+/* Double-rule borders echo classic broadside and letterpress printing */
+nav {
+    border-top: 6px double var(--ink);
+    border-bottom: 6px double var(--ink);
+    padding: 0.65rem 0;
+    margin-bottom: 2.25rem;
 }
 
 nav ul {
     padding: 0;
+    margin: 0;
     list-style: none;
-    font-weight: bold;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 1.75rem;
+    justify-content: center;
 }
 
 nav ul li {
     display: inline;
-    margin-right: 20px;
-    line-height: 2.5em;
 }
 
+nav a {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 700;
+    font-size: 0.875rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--ink);
+    padding: 0.2em 0;
+    border-bottom: 2px solid transparent;
+    transition: color 0.15s, border-color 0.15s;
+}
+
+nav a:hover,
+nav a:focus {
+    color: var(--wood);
+    border-bottom-color: var(--wood);
+    outline: none;
+}
+
+/* --- Page Title Block --- */
+#title-block-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 2px solid var(--ink-mid);
+}
+
+#title-block-header h1.title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 900;
+    font-size: 2.4rem;
+    line-height: 1.2;
+    margin: 0;
+    letter-spacing: 0.01em;
+    color: var(--ink);
+}
+
+/* --- Headings --- */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', Georgia, serif;
+    color: var(--ink);
+    line-height: 1.25;
+    margin-top: 1.75em;
+    margin-bottom: 0.4em;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 900;
+    border-bottom: 2px solid var(--ink);
+    padding-bottom: 0.3em;
+}
+
+h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    border-bottom: 1px solid var(--wood);
+    padding-bottom: 0.2em;
+}
+
+h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+/* h4 used on the homepage as a tagline — render as an italic subheading */
+h4 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--wood);
+    text-align: center;
+    margin-top: 0.5em;
+}
+
+h5 {
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+h6 {
+    font-size: 0.95rem;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--muted);
+}
+
+/* --- Links --- */
+a {
+    color: var(--wood);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+}
+
+a:hover  { color: var(--ink); }
+a:visited { color: var(--grain); }
+
+/* --- Images --- */
+/* Offset box-shadow gives a woodblock-print impression */
 img {
-    max-width: 95%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1.5rem auto;
+    border: 2px solid var(--ink-mid);
+    box-shadow: 5px 5px 0 var(--ink-mid);
 }
 
-/*Thanks https://css-tricks.com/snippets/css/simple-and-nice-blockquote-styling */
+/* --- Blockquote --- */
 blockquote {
-    filter: opacity(75%);
-    border-left: 10px solid #ccc;
-    margin: 1.5em 10px;
-    padding: 0.5em 10px;
+    border-left: 5px solid var(--wood);
+    background: rgba(90, 58, 26, 0.06);
+    margin: 1.75em 0;
+    padding: 0.75em 1.25em;
+    font-style: italic;
+    color: var(--ink-mid);
     quotes: "\201C""\201D""\2018""\2019";
 }
-blockquote:before {
+
+blockquote::before {
     content: open-quote;
-    font-size: 4em;
+    font-size: 3.5em;
     line-height: 0.1em;
-    margin-right: 0.25em;
-    vertical-align: -0.4em;
+    margin-right: 0.2em;
+    vertical-align: -0.35em;
+    color: var(--wood);
+    font-family: 'Playfair Display', Georgia, serif;
 }
+
 blockquote p {
     display: inline;
+}
+
+/* --- Tables --- */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 1.5em 0;
+    font-size: 0.95rem;
+}
+
+th {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    background: var(--ink);
+    color: var(--parchment);
+    padding: 0.55em 0.75em;
+    text-align: left;
+}
+
+td {
+    padding: 0.5em 0.75em;
+    border-bottom: 1px solid var(--muted);
+}
+
+tr:nth-child(even) td {
+    background: rgba(90, 58, 26, 0.05);
+}
+
+/* --- Horizontal Rule --- */
+hr {
+    border: none;
+    border-top: 1px solid var(--ink-mid);
+    margin: 2.5em 0;
+    opacity: 0.4;
+}
+
+/* --- Lists --- */
+ul, ol {
+    padding-left: 1.5em;
+}
+
+li {
+    margin-bottom: 0.3em;
+}
+
+/* --- Code --- */
+code {
+    font-size: 0.88em;
+    background: rgba(90, 58, 26, 0.08);
+    padding: 0.15em 0.35em;
+    border-radius: 2px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+pre {
+    background: var(--ink);
+    color: var(--parchment);
+    padding: 1.25em 1.5em;
+    overflow-x: auto;
+    border-left: 4px solid var(--wood);
+    margin: 1.5em 0;
+}
+
+pre code {
+    background: none;
+    padding: 0;
+    color: inherit;
+    font-size: 0.88em;
+}
+
+/* --- Footer --- */
+/* Override the inline filter:opacity(33%) set in footer.html */
+footer {
+    filter: none !important;
+    margin-top: 3rem;
+    padding: 1rem 0 0.5rem;
+    border-top: 4px double var(--ink);
+    font-size: 0.85rem;
+    font-family: 'Playfair Display', Georgia, serif;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+    text-align: center;
+}
+
+footer a       { color: var(--muted); }
+footer a:hover { color: var(--ink); }
+
+/* --- Responsive --- */
+@media (max-width: 600px) {
+    body {
+        font-size: 16px;
+        margin-top: 1rem;
+        padding: 0 1rem 3rem;
+    }
+
+    #title-block-header h1.title {
+        font-size: 1.75rem;
+    }
+
+    nav a {
+        font-size: 0.8rem;
+        letter-spacing: 0.07em;
+    }
+
+    nav ul {
+        gap: 0 1rem;
+    }
 }
