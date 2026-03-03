@@ -1,5 +1,5 @@
 ---
-title: Hello, World!
+title: Welcome to the Aromas Community Grange
 ---
 
-This is html generated from Markdown with Pandoc.
+![](/assets/Grange-Woodcut.jpg "Aromas Community Grange")
