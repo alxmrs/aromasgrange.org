@@ -3,6 +3,8 @@ title: Membership
 description-meta: "Join the Aromas Community Grange!"
 ---
 
+![](/assets/grange-fish.jpg)
+
 Do you want to become a member of the Aromas Community Grange? **Heck yeah, ya do!** Here’s why:
 
 At the Aromas Community Grange we:
