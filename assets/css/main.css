@@ -37,7 +37,7 @@ body {
 nav {
     border-top: 6px double var(--ink);
     border-bottom: 6px double var(--ink);
-    padding: 0.65rem 0;
+    padding: 0.3rem 0;
     margin-bottom: 2.25rem;
 }
 
@@ -47,12 +47,14 @@ nav ul {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     gap: 0 1.75rem;
     justify-content: center;
 }
 
 nav ul li {
     display: inline;
+    margin-bottom: 0;
 }
 
 nav a {
@@ -66,6 +68,23 @@ nav a {
     padding: 0.2em 0;
     border-bottom: 2px solid transparent;
     transition: color 0.15s, border-color 0.15s;
+}
+
+.nav-logo a {
+    border-bottom: none;
+}
+
+.site-logo {
+    height: 3.5rem;
+    width: auto;
+    display: block;
+    border: none;
+    box-shadow: none;
+    margin: 0;
+}
+
+.site-logo:hover {
+    opacity: 0.85;
 }
 
 nav a:hover,
@@ -280,7 +299,7 @@ footer {
 footer a       { color: var(--muted); }
 footer a:hover { color: var(--ink); }
 
-/* --- Responsive --- */
+/* --- Responsive / Hamburger --- */
 @media (max-width: 600px) {
     body {
         font-size: 16px;
@@ -292,12 +311,35 @@ footer a:hover { color: var(--ink); }
         font-size: 1.75rem;
     }
 
-    nav a {
-        font-size: 0.8rem;
-        letter-spacing: 0.07em;
+    /* Stack nav items vertically; logo sits at top as the toggle */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
     }
 
-    nav ul {
-        gap: 0 1rem;
+    /* Hide all links by default; only the logo is visible */
+    nav ul li:not(.nav-logo) {
+        display: none;
+        width: 100%;
+        text-align: center;
+        padding: 0.5rem 0;
+        border-top: 1px solid rgba(28, 18, 8, 0.15);
+        margin-bottom: 0;
+    }
+
+    /* Reveal links when the menu is toggled open */
+    nav ul.open li:not(.nav-logo) {
+        display: block;
+    }
+
+    nav ul.open .nav-logo {
+        padding-bottom: 0.25rem;
+    }
+
+    /* Logo pulses slightly to hint it's tappable */
+    .nav-logo a:focus .site-logo,
+    .nav-logo a:active .site-logo {
+        opacity: 0.75;
     }
 }
