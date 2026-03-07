@@ -1,11 +1,11 @@
 # Pandoc Website Template
 
-[![pages-deploy](https://github.com/alxmrs/pandoc-website-template/actions/workflows/pages.yml/badge.svg)](https://github.com/alxmrs/pandoc-website-template/actions/workflows/pages.yml)
-[![shellcheck](https://github.com/alxmrs/pandoc-website-template/actions/workflows/shellcheck.yml/badge.svg)](https://github.com/alxmrs/pandoc-website-template/actions/workflows/shellcheck.yml)
+[![pages-deploy](https://github.com/alxmrs/aromasgrange.org/actions/workflows/pages.yml/badge.svg)](https://github.com/alxmrs/aromasgrange.org/actions/workflows/pages.yml)
+[![shellcheck](https://github.com/alxmrs/aromasgrange.org/actions/workflows/shellcheck.yml/badge.svg)](https://github.com/alxmrs/aromasgrange.org/actions/workflows/shellcheck.yml)
 
-A template to build static websites with [Pandoc](https://pandoc.org/). 
+The Aromas Community Grange Website, a statically generated site via Pandoc.
 
-Demo site: [pandoc.merose.com](https://pandoc.merose.com/).
+Site: [https://grange.aromas.town](https://grange.aromas.town)
 
 ## Use
 
