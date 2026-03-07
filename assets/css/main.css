@@ -37,8 +37,12 @@ body {
 nav {
     border-top: 6px double var(--ink);
     border-bottom: 6px double var(--ink);
-    padding: 0.3rem 0;
+    padding: 0.3rem 0.5rem;
     margin-bottom: 2.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0 1.5rem;
 }
 
 nav ul {
@@ -49,7 +53,6 @@ nav ul {
     flex-wrap: wrap;
     align-items: center;
     gap: 0 1.75rem;
-    justify-content: center;
 }
 
 nav ul li {
@@ -70,9 +73,20 @@ nav a {
     transition: color 0.15s, border-color 0.15s;
 }
 
-.nav-logo a {
+nav a:hover,
+nav a:focus {
+    color: var(--wood);
+    border-bottom-color: var(--wood);
+    outline: none;
+}
+
+.nav-logo-link {
+    display: block;
+    flex-shrink: 0;
     border-bottom: none;
 }
+
+.nav-logo-link:hover { opacity: 0.85; }
 
 .site-logo {
     height: 3.5rem;
@@ -83,16 +97,29 @@ nav a {
     margin: 0;
 }
 
-.site-logo:hover {
-    opacity: 0.85;
+/* Hamburger button — hidden on desktop */
+.nav-hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 1.6rem;
+    height: 1.2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    flex-shrink: 0;
 }
 
-nav a:hover,
-nav a:focus {
-    color: var(--wood);
-    border-bottom-color: var(--wood);
-    outline: none;
+.nav-hamburger span {
+    display: block;
+    height: 2px;
+    background: var(--ink);
+    border-radius: 1px;
+    transition: opacity 0.15s;
 }
+
+.nav-hamburger:hover span { opacity: 0.6; }
 
 /* --- Page Title Block --- */
 #title-block-header {
@@ -311,35 +338,42 @@ footer a:hover { color: var(--ink); }
         font-size: 1.75rem;
     }
 
-    /* Stack nav items vertically; logo sits at top as the toggle */
+    /* On mobile: logo left, hamburger right, links hidden below */
+    nav {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 0.4rem 0.25rem;
+    }
+
+    /* Show the hamburger button */
+    .nav-hamburger {
+        display: flex;
+    }
+
+    /* Links collapse below the logo/hamburger row */
     nav ul {
+        display: none;
         flex-direction: column;
         align-items: center;
         gap: 0;
+        width: 100%;
+        padding-top: 0.4rem;
+        border-top: 1px solid rgba(28, 18, 8, 0.15);
+        margin-top: 0.4rem;
     }
 
-    /* Hide all links by default; only the logo is visible */
-    nav ul li:not(.nav-logo) {
-        display: none;
+    nav ul.open {
+        display: flex;
+    }
+
+    nav ul li {
         width: 100%;
         text-align: center;
-        padding: 0.5rem 0;
-        border-top: 1px solid rgba(28, 18, 8, 0.15);
-        margin-bottom: 0;
+        padding: 0.45rem 0;
+        border-bottom: 1px solid rgba(28, 18, 8, 0.1);
     }
 
-    /* Reveal links when the menu is toggled open */
-    nav ul.open li:not(.nav-logo) {
-        display: block;
-    }
-
-    nav ul.open .nav-logo {
-        padding-bottom: 0.25rem;
-    }
-
-    /* Logo pulses slightly to hint it's tappable */
-    .nav-logo a:focus .site-logo,
-    .nav-logo a:active .site-logo {
-        opacity: 0.75;
+    nav ul li:last-child {
+        border-bottom: none;
     }
 }

@@ -1,6 +1,13 @@
-<nav>
+<nav id="main-nav">
+  <a href="/" class="nav-logo-link">
+    <img src="/assets/grange-logo.png" alt="Aromas Community Grange" class="site-logo" />
+  </a>
+  <button class="nav-hamburger" id="nav-toggle" aria-label="Open navigation" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
   <ul id="nav-links">
-    <li class="nav-logo"><a href="/" id="nav-toggle" aria-expanded="false"><img src="/assets/grange-logo.png" alt="Aromas Community Grange" class="site-logo" /></a></li>
     <li><a href="/">Home</a></li>
     <li><a href="/about/">About</a></li>
     <li><a href="/events/">Events</a></li>
@@ -14,12 +21,10 @@
   var toggle = document.getElementById('nav-toggle');
   var links  = document.getElementById('nav-links');
   if (!toggle || !links) return;
-  toggle.addEventListener('click', function (e) {
-    if (window.matchMedia('(max-width: 600px)').matches) {
-      e.preventDefault();
-      var open = links.classList.toggle('open');
-      toggle.setAttribute('aria-expanded', String(open));
-    }
+  toggle.addEventListener('click', function () {
+    var open = links.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
   });
 }());
 </script>
