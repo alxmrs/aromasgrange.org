@@ -202,6 +202,44 @@ a {
 a:hover  { color: var(--ink); }
 a:visited { color: var(--grain); }
 
+/* --- Buttons --- */
+/* Solid, woodblock-stamped call-to-action; echoes the offset shadow on img */
+.join-button {
+    display: inline-block;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--parchment);
+    background: var(--ink);
+    border: 2px solid var(--ink);
+    padding: 0.75em 1.75em;
+    margin: 0.5em 0 1.5em;
+    box-shadow: 4px 4px 0 var(--wood);
+    transition: transform 0.12s, box-shadow 0.12s, background 0.12s, color 0.12s;
+}
+
+.join-button:hover,
+.join-button:focus {
+    background: var(--wood);
+    border-color: var(--wood);
+    color: var(--parchment);
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 var(--ink);
+    outline: none;
+}
+
+.join-button:active {
+    transform: translate(0, 0);
+    box-shadow: 2px 2px 0 var(--ink);
+}
+
+.join-button:visited {
+    color: var(--parchment);
+}
+
 /* --- Images --- */
 /* Offset box-shadow gives a woodblock-print impression */
 img {
@@ -336,6 +374,12 @@ footer a:hover { color: var(--ink); }
 
     #title-block-header h1.title {
         font-size: 1.75rem;
+    }
+
+    .join-button {
+        display: block;
+        text-align: center;
+        width: 100%;
     }
 
     /* On mobile: logo left, hamburger right, links hidden below */

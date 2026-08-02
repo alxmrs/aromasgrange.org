@@ -5,6 +5,8 @@ description-meta: "Join the Aromas Community Grange!"
 
 ![](/assets/grange-fish.jpg)
 
+[Join the Aromas Grange](https://forms.gle/6ZMujZTfu7EWpRSXA){.join-button}
+
 Do you want to become a member of the Aromas Community Grange? **Heck yeah, ya do!** Here’s why:
 
 At the Aromas Community Grange we:
@@ -26,3 +28,7 @@ At the Aromas Community Grange we:
 - New Adult Membership: $40
 - Family Membership Renewal: $80
 - Adult Membership Renewal: $40
+
+To sign up as a member, check here:
+
+[Join the Aromas Grange](https://forms.gle/6ZMujZTfu7EWpRSXA){.join-button}
