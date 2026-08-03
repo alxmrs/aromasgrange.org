@@ -5,7 +5,7 @@
 
 The Aromas Community Grange Website, a statically generated site via Pandoc.
 
-Site: [https://grange.aromas.town](https://grange.aromas.town)
+Site: [aromasgrange.org](https://aromasgrange.org)
 
 ## Use
 
