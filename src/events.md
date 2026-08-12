@@ -2,7 +2,37 @@
 title: Event Calendar
 description-meta: The Aromas Grange Community Events Calendar
 ---
-<iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FLos_Angeles&mode=MONTH&title=Aromas%20Community%20Grange%20%23361&src=ZDE2M2Q5ZjFhODI3YzE0Mzg3YjhhNjUwMWM2ZTRmZjE4ODRhZTdkZDE0NDM2OWM0ODE1NmViNzZiN2QxMjlhMEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23ef6c00" style="border-width:0" width="670" height="600" frameborder="0" scrolling="no"></iframe>
+<div class="calendar-embed">
+  <iframe id="grange-calendar" title="Aromas Community Grange event calendar" data-src-month="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FLos_Angeles&mode=MONTH&title=Aromas%20Community%20Grange%20%23361&src=ZDE2M2Q5ZjFhODI3YzE0Mzg3YjhhNjUwMWM2ZTRmZjE4ODRhZTdkZDE0NDM2OWM0ODE1NmViNzZiN2QxMjlhMEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23ef6c00" data-src-schedule="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FLos_Angeles&mode=AGENDA&showTitle=0&showPrint=0&showCalendars=0&showTz=0&src=ZDE2M2Q5ZjFhODI3YzE0Mzg3YjhhNjUwMWM2ZTRmZjE4ODRhZTdkZDE0NDM2OWM0ODE1NmViNzZiN2QxMjlhMEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23ef6c00"></iframe>
+  <noscript><iframe title="Aromas Community Grange event calendar" src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FLos_Angeles&mode=MONTH&title=Aromas%20Community%20Grange%20%23361&src=ZDE2M2Q5ZjFhODI3YzE0Mzg3YjhhNjUwMWM2ZTRmZjE4ODRhZTdkZDE0NDM2OWM0ODE1NmViNzZiN2QxMjlhMEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23ef6c00"></iframe></noscript>
+</div>
+
+<script>
+(function () {
+  var frame = document.getElementById('grange-calendar');
+  if (!frame) return;
+
+  // Keep this breakpoint in sync with the .calendar-embed rules in main.css.
+  var narrow = window.matchMedia('(max-width: 600px)');
+
+  // The month grid is unreadable on a phone, so narrow screens get Google's
+  // schedule (AGENDA) view instead -- a plain list of upcoming events.
+  function applyMode(isNarrow) {
+    var src = frame.getAttribute(isNarrow ? 'data-src-schedule' : 'data-src-month');
+    // Assigning src reloads the embed, so only touch it when the mode changes.
+    if (src && frame.getAttribute('src') !== src) frame.setAttribute('src', src);
+  }
+
+  // The iframe ships with no src, so this first call is its only fetch.
+  applyMode(narrow.matches);
+
+  if (narrow.addEventListener) {
+    narrow.addEventListener('change', function (e) { applyMode(e.matches); });
+  } else if (narrow.addListener) {
+    narrow.addListener(function (e) { applyMode(e.matches); }); // Safari < 14
+  }
+}());
+</script>
 
 ## Classes
 

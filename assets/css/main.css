@@ -421,3 +421,29 @@ footer a:hover { color: var(--ink); }
         border-bottom: none;
     }
 }
+
+/* --- Event calendar embed --- */
+.calendar-embed {
+    margin: 1.5rem 0;
+}
+
+/* Pandoc wraps the raw iframe in a <p>; don't let it add stray margins. */
+.calendar-embed p {
+    margin: 0;
+}
+
+.calendar-embed iframe {
+    display: block;
+    width: 100%;
+    height: 600px;
+    border: 0;
+}
+
+/* Narrow screens swap the month grid for the schedule view (see the mode
+   switch in src/events.md); a list of events wants less height than a grid. */
+@media (max-width: 600px) {
+    .calendar-embed iframe {
+        height: 70vh;
+        min-height: 400px;
+    }
+}
