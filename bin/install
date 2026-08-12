@@ -4,24 +4,69 @@ set -e
 # Install pandoc on debian.
 #
 VERSION="3.6.3"
+DEB="pandoc.deb"
+URL="https://github.com/jgm/pandoc/releases/download/$VERSION/pandoc-$VERSION-1-amd64.deb"
 
-# Only download if the file doesn't exist (not cached)
-if [ ! -f pandoc.deb ]; then
-    echo "Downloading pandoc $VERSION..."
-    curl -o pandoc.deb -L -C - "https://github.com/jgm/pandoc/releases/download/$VERSION/pandoc-$VERSION-1-amd64.deb"
+#
+# A failed download still leaves a file on disk, and CI restores pandoc.deb
+# from a cache that may hold junk or the wrong version. Trust nothing until
+# dpkg itself confirms the archive parses and holds the version we asked for.
+#
+usable_deb() {
+    [ -f "$1" ] || return 1
+    case "$(dpkg-deb --field "$1" Version 2>/dev/null)" in
+        "$VERSION" | "$VERSION"-*) return 0 ;;
+        *) return 1 ;;
+    esac
+}
+
+if usable_deb "$DEB"; then
+    echo "Using cached $DEB"
 else
-    echo "Using cached pandoc.deb"
+    if [ -e "$DEB" ]; then
+        echo "Discarding unusable $DEB"
+        rm -f "$DEB"
+    fi
+
+    echo "Downloading pandoc $VERSION..."
+    # --fail so an HTTP error page is never mistaken for a package, and
+    # --retry so a flaky release CDN costs seconds instead of a red build.
+    # Write to a temp file: $DEB only ever exists as a complete archive, so a
+    # bad download can neither be resumed onto nor cached for the next run.
+    status=0
+    curl --fail --location --show-error \
+        --retry 5 --retry-delay 2 --retry-all-errors --connect-timeout 10 \
+        -o "$DEB.part" "$URL" || status=$?
+    if [ "$status" -ne 0 ]; then
+        rm -f "$DEB.part"
+        exit "$status"
+    fi
+
+    if ! usable_deb "$DEB.part"; then
+        echo "Download is not a pandoc $VERSION package. First bytes:" >&2
+        head -c 200 "$DEB.part" >&2
+        echo >&2
+        rm -f "$DEB.part"
+        exit 1
+    fi
+
+    mv "$DEB.part" "$DEB"
 fi
-sudo dpkg -i pandoc.deb
+
+sudo dpkg -i "$DEB"
 
 #
 # Install pandoc-rss on debian.
 #
-if [ ! -d rss ]; then
-    echo "Cloning pandoc-rss..."
-    git clone https://github.com/chambln/pandoc-rss.git rss
-else
+if [ -f rss/Makefile ]; then
     echo "Using cached pandoc-rss directory"
+else
+    if [ -e rss ]; then
+        echo "Discarding incomplete pandoc-rss checkout"
+        rm -rf rss
+    fi
+    echo "Cloning pandoc-rss..."
+    git clone --depth 1 https://github.com/chambln/pandoc-rss.git rss
 fi
 cd rss || exit 2
 sudo make install
