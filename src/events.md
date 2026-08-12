@@ -2,7 +2,7 @@
 title: Event Calendar
 description-meta: The Aromas Grange Community Events Calendar
 ---
-<iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FLos_Angeles&mode=MONTH&title=Aromas%20Community%20Grange%20%23361&src=ZDE2M2Q5ZjFhODI3YzE0Mzg3YjhhNjUwMWM2ZTRmZjE4ODRhZTdkZDE0NDM2OWM0ODE1NmViNzZiN2QxMjlhMEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23ef6c00" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+<iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FLos_Angeles&mode=MONTH&title=Aromas%20Community%20Grange%20%23361&src=ZDE2M2Q5ZjFhODI3YzE0Mzg3YjhhNjUwMWM2ZTRmZjE4ODRhZTdkZDE0NDM2OWM0ODE1NmViNzZiN2QxMjlhMEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23ef6c00" style="border-width:0" width="670" height="600" frameborder="0" scrolling="no"></iframe>
 
 ## Classes
 
